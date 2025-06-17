@@ -19,44 +19,6 @@ This project aims to design and implement machine learning models to detect phis
 
 ---
 
-## Project Structure
-
-```
-
-phishing-email-detector/
-├── data/ # Raw input data
-│ └── CapstoneProjectData_2025.csv # Raw phishing emails dataset
-├── features/ # Engineered features and labels
-│ ├── features.csv # Extracted feature matrix
-│ └── labels.csv # Labels (currently all 1s, to update with real labels)
-├── models/ # Saved ML models (to be added)
-├── src/ # Core Python scripts
-│ ├── phishing_email_preprocessing.py # Feature extraction and preprocessing
-│ └── train_model.py # ML model training (to be added)
-├── notebooks/ # Exploratory data analysis and experiments (optional)
-├── requirements.txt # Python dependencies
-└── README.md # This file
-
-```
-
----
-
-## Features Extracted
-
-### Structural (manual features)
-
-- Character count
-- Word count
-- Uppercase ratio
-- Number of URLs
-- Number of exclamation marks
-
-### Textual (semantic features)
-
-- Top 300 most informative words identified via TF-IDF on cleaned email content
-
----
-
 ## Team Tasks and Progress
 
 Each team member is responsible for implementing and evaluating one classification algorithm. The final optimization and validation will be done together.
@@ -76,6 +38,13 @@ Each team member is responsible for implementing and evaluating one classificati
 
 Instructor: Riham AlTawy
 GitHub: [https://github.com/RihamAlTawy](https://github.com/RihamAlTawy)
+
+Team members:
+Qianjing Sun
+Venkata Srivani Reddy Yarram Reddy
+Michael He
+Junyi Ma
+Guangning Li
 
 ---
 
