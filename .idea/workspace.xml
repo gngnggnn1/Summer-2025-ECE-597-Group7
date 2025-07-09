@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b7f673e8-3457-4042-a16b-19e1133f8e60" name="Changes" comment="add train_bayes(it will be moved to algorithm)">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/CaptstoneProjectData_2025.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset_and_Preprocessing/training_and_evaluation.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FLD.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Report/Capstone Project - Team 7.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/About ready_for_training.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/CaptstoneProjectData_2025.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/Random_Forest_.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/create_final_dataset.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/emails-normal-class.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/normal_features.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/phishing_features.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/process_normal_data.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/process_phishing_data.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/ready_for_training.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/training_and_evaluation_logicstic _regression.ipynb" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MiaoNan&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gngnggnn1/Summer-2025-ECE-597-Group7.git&quot;,
+    &quot;accountId&quot;: &quot;38d5abab-5444-48e5-a958-c3ecd395b70a&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2ysrjmB1mcAgZrhXRjDmW0XNGDg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.bayes.executor": "Run",
+    "Python.data_cleaning.executor": "Run",
+    "Python.preprocessing.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "michael__new",
+    "last_opened_file_path": "/Users/michaelhe/Documents/uvic/ECE597/Summer-2025-ECE-597-Group7",
+    "settings.editor.selected.configurable": "advanced.settings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/classifier" />
+      <recent name="$PROJECT_DIR$/dataset" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-fb887030ada0-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.21565.199" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b7f673e8-3457-4042-a16b-19e1133f8e60" name="Changes" comment="" />
+      <created>1750634258734</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750634258734</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Add data cleaning, extract the subject and body from the kaggle dataset, cleaned both dataset.">
+      <option name="closed" value="true" />
+      <created>1750635984500</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750635984500</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add train_bayes(it will be moved to algorithm)">
+      <option name="closed" value="true" />
+      <created>1750637015991</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750637015991</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add train_bayes(it will be moved to algorithm)">
+      <option name="closed" value="true" />
+      <created>1752094884307</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752094884307</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add train_bayes(it will be moved to algorithm)">
+      <option name="closed" value="true" />
+      <created>1752094903376</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752094903376</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add data cleaning, extract the subject and body from the kaggle dataset, cleaned both dataset." />
+    <MESSAGE value="add train_bayes(it will be moved to algorithm)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add train_bayes(it will be moved to algorithm)" />
+  </component>
+</project>

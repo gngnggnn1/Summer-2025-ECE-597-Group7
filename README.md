@@ -3,6 +3,27 @@
 This project aims to design and implement machine learning models to detect phishing emails. The problem is formulated as a binary classification task using traditional ML algorithms trained on manually engineered and TF-IDF features extracted from real phishing email data.
 
 ---
+## 📁 Folder Structure
+
+- `classifier/`  
+  Contains baseline classifiers and all preprocessing code.  
+  *(Note: The contents from `Dataset_and_Preprocessing/` and `preprocessing/` should be moved here.)*
+
+- `dataset/`  
+  Stores all datasets, including raw emails, cleaned versions, and labeled data.  
+  *(Note: Data files from `Dataset_and_Preprocessing/` should also be moved here.)*
+
+- `Report/`  
+  Contains the final project report and presentation slides.
+
+- `Dataset_and_Preprocessing/` *(to be merged)*  
+  Temporarily holds both data and preprocessing scripts.  
+  Will be split and integrated into `Dataset/` and `classifier/`.
+
+- `preprocessing/` *(to be merged)*  
+  Contains scripts for feature extraction and data cleaning.  
+  Should be moved into `classifier/`.
+---
 
 ## Project Stages
 
