@@ -49,7 +49,7 @@ def evaluate_model(y_true, y_pred, y_proba):
 
 
 # Load and preprocess data
-data = pd.read_csv('preprocessing/ready_for_training.csv')
+data = pd.read_csv('../preprocessing/ready_for_training.csv')
 data = data.dropna(subset=['processed_text'])
 
 X_text = data['processed_text']

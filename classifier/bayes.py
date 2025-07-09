@@ -5,13 +5,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 
-def load_data():
-    data = pd.read_csv('../preprocessing/ready_for_training.csv')
-
-    scam = data[data['label'] == 1]['processed_text'].to_frame(name='text')
-    ham = data[data['label'] == 0]['processed_text'].to_frame(name='text')
-    return ham, scam
-
+from Dataset.preprocessing import load_data
 
 def key_world_extraction(type):
     ham, scam = load_data()
