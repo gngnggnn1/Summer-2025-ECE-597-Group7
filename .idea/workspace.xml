@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7f673e8-3457-4042-a16b-19e1133f8e60" name="Changes" comment="add train_bayes(it will be moved to algorithm)" />
+    <list default="true" id="b7f673e8-3457-4042-a16b-19e1133f8e60" name="Changes" comment="add train_bayes(it will be moved to algorithm)">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/CaptstoneProjectData_2025.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/create_final_dataset.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/create_final_dataset.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/process_normal_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/process_normal_data.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classifier/bayes.py" beforeDir="false" afterPath="$PROJECT_DIR$/classifier/bayes.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

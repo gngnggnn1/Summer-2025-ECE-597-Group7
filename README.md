@@ -9,7 +9,7 @@ This project aims to design and implement machine learning models to detect phis
   Contains baseline classifiers and all preprocessing code.  
   *(Note: The contents from `Dataset_and_Preprocessing/` and `preprocessing/` should be moved here.)*
 
-- `Dataset/`  
+- `dataset/`  
   Stores all datasets, including raw emails, cleaned versions, and labeled data.  
   *(Note: Data files from `Dataset_and_Preprocessing/` should also be moved here.)*
 
