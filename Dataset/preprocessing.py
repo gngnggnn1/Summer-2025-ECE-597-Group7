@@ -10,7 +10,7 @@ and the type could be:
 '''
 
 def load_data():
-    data = pd.read_csv('../dataset/phishing_email.csv')
+    data = pd.read_csv('../data/phishing_email.csv')
     scam = data[data['label'] == 1]['text_combined'].to_frame(name='text')
     ham = data[data['label'] == 0]['text_combined'].to_frame(name='text')
     return ham, scam
@@ -35,3 +35,6 @@ def word_vectorization(type='tfidf'):
         X_train_vec = vectorizer.fit_transform(X_train)
         X_test_vec = vectorizer.transform(X_test)
     return X_train_vec, X_test_vec, y_train, y_test
+
+
+
