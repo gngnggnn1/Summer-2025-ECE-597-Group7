@@ -58,6 +58,7 @@ X_train_vec, X_test_vec, y_train, y_test = word_vectorization(type='tfidf')
 
 
 # ---------- FLD ----------
+
 print("\nFLD Evaluation: \n")
 
 model = SimpleFLD()
@@ -68,6 +69,7 @@ y_proba = model.predict_proba(X_test_vec)[:, 1]
 evaluate_model(y_test, y_pred, y_proba)
 
 # ---------- Cross-Validation FLD ----------
+
 X_all = vstack([X_train_vec, X_test_vec])
 y_all = pd.concat([y_train.reset_index(drop=True), y_test.reset_index(drop=True)], ignore_index=True)
 results = cross_validation(model, X_all, y_all, cv=5)
