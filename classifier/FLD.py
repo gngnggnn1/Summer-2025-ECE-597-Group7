@@ -1,8 +1,13 @@
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+
 import pandas as pd
 import numpy as np
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.model_selection import train_test_split, StratifiedKFold
+from Dataset.preprocessing import word_vectorization
 from sklearn.metrics import classification_report, roc_auc_score, confusion_matrix, accuracy_score
+from cross_validation import cross_validation
+from scipy.sparse import vstack
 
 
 class SimpleFLD:
@@ -42,52 +47,35 @@ class SimpleFLD:
 
 
 def evaluate_model(y_true, y_pred, y_proba):
-    print("Classification Report:\n", classification_report(y_true, y_pred))
-    print("Confusion Matrix:\n", confusion_matrix(y_true, y_pred))
-    print("ROC AUC Score:", roc_auc_score(y_true, y_proba))
-    print("Accuracy:", accuracy_score(y_true, y_pred) * 100)
+    print("\nClassification Report:\n\n", classification_report(y_true, y_pred))
+    print("\nConfusion Matrix is:\n\n", confusion_matrix(y_true, y_pred))
+    print("\nROC AUC Score:", roc_auc_score(y_true, y_proba))
+    print("\nAccuracy:", accuracy_score(y_true, y_pred) * 100)
 
 
 # Load and preprocess data
-data = pd.read_csv('../preprocessing/ready_for_training.csv')
-data = data.dropna(subset=['processed_text'])
+X_train_vec, X_test_vec, y_train, y_test = word_vectorization(type='tfidf')
 
-X_text = data['processed_text']
-y = data['label']
-
-vectorizer = TfidfVectorizer(stop_words='english', max_features=1000)
-X_tfidf = vectorizer.fit_transform(X_text)
 
 # ---------- FLD ----------
-print("===== Normal FLD Evaluation =====")
-X_train, X_test, y_train, y_test = train_test_split(X_tfidf, y, test_size=0.2, random_state=42, stratify=y)
+print("\nFLD Evaluation: \n")
 
 model = SimpleFLD()
-model.fit(X_train, y_train)
-y_pred = model.predict(X_test)
-y_proba = model.predict_proba(X_test)[:, 1]
+model.fit(X_train_vec, y_train)
+y_pred = model.predict(X_test_vec)
+y_proba = model.predict_proba(X_test_vec)[:, 1]
 
 evaluate_model(y_test, y_pred, y_proba)
 
 # ---------- Cross-Validation FLD ----------
-print("\n===== Cross-Validation FLD Evaluation =====")
-kf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+X_all = vstack([X_train_vec, X_test_vec])
+y_all = pd.concat([y_train.reset_index(drop=True), y_test.reset_index(drop=True)], ignore_index=True)
+results = cross_validation(model, X_all, y_all, cv=5)
 
-all_preds = []
-all_probas = []
-all_trues = []
+print("\nAfter Cross Validation: \n")
 
-for train_idx, test_idx in kf.split(X_tfidf, y):
-    X_train_cv, X_test_cv = X_tfidf[train_idx], X_tfidf[test_idx]
-    y_train_cv, y_test_cv = y.iloc[train_idx], y.iloc[test_idx]
-
-    model_cv = SimpleFLD()
-    model_cv.fit(X_train_cv, y_train_cv)
-    y_pred_cv = model_cv.predict(X_test_cv)
-    y_proba_cv = model_cv.predict_proba(X_test_cv)[:, 1]
-
-    all_preds.extend(y_pred_cv)
-    all_probas.extend(y_proba_cv)
-    all_trues.extend(y_test_cv)
-
-evaluate_model(all_trues, all_preds, all_probas)
+for metric, (mean, std) in results.items():
+    if metric == 'accuracy':
+        print(f"{metric.capitalize()}: {mean * 100:.2f}% ± {std * 100:.2f}%")
+    else:
+        print(f"{metric.capitalize()}: {mean:.4f} ± {std:.4f}")
