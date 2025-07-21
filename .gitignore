@@ -1,2 +1,4 @@
-preprocessing\normal_features.csv
-preprocessing\emails-normal-class.csv
+preprocessing/normal_features.csv
+preprocessing/emails-normal-class.csv
+data/phishing_email.csv
+data
