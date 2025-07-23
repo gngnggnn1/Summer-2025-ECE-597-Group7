@@ -6,23 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b7f673e8-3457-4042-a16b-19e1133f8e60" name="Changes" comment="add train_bayes(it will be moved to algorithm)">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dataset/CaptstoneProjectData_2025.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dataset_and_Preprocessing/training_and_evaluation.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FLD.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report/Capstone Project - Team 7.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bayes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/About ready_for_training.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/CaptstoneProjectData_2025.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/Random_Forest_.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/create_final_dataset.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/emails-normal-class.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/normal_features.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/phishing_features.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/process_normal_data.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/process_phishing_data.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/ready_for_training.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/training_and_evaluation_logicstic _regression.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dataset/preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classifier/bayes.py" beforeDir="false" afterPath="$PROJECT_DIR$/classifier/bayes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,10 +49,10 @@
   "keyToString": {
     "Python.bayes.executor": "Run",
     "Python.data_cleaning.executor": "Run",
-    "Python.preprocessing.executor": "Run",
+    "Python.preprocessing.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "michael__new",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/michaelhe/Documents/uvic/ECE597/Summer-2025-ECE-597-Group7",
     "settings.editor.selected.configurable": "advanced.settings"
   }

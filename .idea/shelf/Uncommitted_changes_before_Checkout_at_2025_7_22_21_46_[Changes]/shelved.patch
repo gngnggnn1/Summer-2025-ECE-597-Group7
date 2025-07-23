@@ -1,0 +1,74 @@
+Index: classifier/bayes.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pandas as pd\n\nfrom sklearn.naive_bayes import MultinomialNB\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import classification_report\n\nfrom dataset.preprocessing import load_data, word_vectorization\n\n\ndef train_bayes():\n    tfidf_matrix, keywords, labels = word_vectorization('tfidf')\n    X_train, X_test, y_train, y_test = train_test_split(tfidf_matrix, labels, test_size=0.2, random_state=42)\n    model = MultinomialNB()\n    model.fit(X_train, y_train)\n    y_pred = model.predict(X_test)\n    print(classification_report(y_test, y_pred))\n    print(\"Accuracy:\", (y_pred == y_test).mean())\n\ntrain_bayes()\n
+===================================================================
+diff --git a/classifier/bayes.py b/classifier/bayes.py
+--- a/classifier/bayes.py	(revision c14e619c5eaf1b064dcb68962f6b2c2c9a367196)
++++ b/classifier/bayes.py	(date 1752523480480)
+@@ -8,8 +8,7 @@
+ 
+ 
+ def train_bayes():
+-    tfidf_matrix, keywords, labels = word_vectorization('tfidf')
+-    X_train, X_test, y_train, y_test = train_test_split(tfidf_matrix, labels, test_size=0.2, random_state=42)
++    X_train, X_test, y_train, y_test = word_vectorization('bow')
+     model = MultinomialNB()
+     model.fit(X_train, y_train)
+     y_pred = model.predict(X_test)
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b7f673e8-3457-4042-a16b-19e1133f8e60\" name=\"Changes\" comment=\"add train_bayes(it will be moved to algorithm)\">\n      <change beforePath=\"$PROJECT_DIR$/.gitignore\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gitignore\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Dataset/CaptstoneProjectData_2025.csv\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Dataset_and_Preprocessing/training_and_evaluation.ipynb\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/FLD.py\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/README.md\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/README.md\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Report/Capstone Project - Team 7.pptx\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/bayes.py\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/preprocessing/About ready_for_training.docx\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/preprocessing/CaptstoneProjectData_2025.csv\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/preprocessing/Random_Forest_.ipynb\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/preprocessing/create_final_dataset.ipynb\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/preprocessing/emails-normal-class.txt\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/preprocessing/normal_features.txt\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/preprocessing/phishing_features.csv\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/preprocessing/process_normal_data.ipynb\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/preprocessing/process_phishing_data.ipynb\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/preprocessing/ready_for_training.csv\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/preprocessing/training_and_evaluation_logicstic _regression.ipynb\" beforeDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Python Script\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;MiaoNan&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/gngnggnn1/Summer-2025-ECE-597-Group7.git&quot;,\n    &quot;accountId&quot;: &quot;38d5abab-5444-48e5-a958-c3ecd395b70a&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 4\n}</component>\n  <component name=\"ProjectId\" id=\"2ysrjmB1mcAgZrhXRjDmW0XNGDg\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Python.bayes.executor\": \"Run\",\n    \"Python.data_cleaning.executor\": \"Run\",\n    \"Python.preprocessing.executor\": \"Run\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"RunOnceActivity.git.unshallow\": \"true\",\n    \"git-widget-placeholder\": \"michael__new\",\n    \"last_opened_file_path\": \"/Users/michaelhe/Documents/uvic/ECE597/Summer-2025-ECE-597-Group7\",\n    \"settings.editor.selected.configurable\": \"advanced.settings\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$\" />\n      <recent name=\"$PROJECT_DIR$/classifier\" />\n      <recent name=\"$PROJECT_DIR$/dataset\" />\n    </key>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-python-sdk-fb887030ada0-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.21565.199\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"b7f673e8-3457-4042-a16b-19e1133f8e60\" name=\"Changes\" comment=\"\" />\n      <created>1750634258734</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1750634258734</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Add data cleaning, extract the subject and body from the kaggle dataset, cleaned both dataset.\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1750635984500</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1750635984500</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"add train_bayes(it will be moved to algorithm)\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1750637015991</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1750637015991</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"add train_bayes(it will be moved to algorithm)\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1752094884307</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1752094884307</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"add train_bayes(it will be moved to algorithm)\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1752094903376</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1752094903376</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"5\" />\n    <servers />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Add data cleaning, extract the subject and body from the kaggle dataset, cleaned both dataset.\" />\n    <MESSAGE value=\"add train_bayes(it will be moved to algorithm)\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"add train_bayes(it will be moved to algorithm)\" />\n  </component>\n</project>
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision c14e619c5eaf1b064dcb68962f6b2c2c9a367196)
++++ b/.idea/workspace.xml	(date 1752523659598)
+@@ -4,25 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b7f673e8-3457-4042-a16b-19e1133f8e60" name="Changes" comment="add train_bayes(it will be moved to algorithm)">
+-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Dataset/CaptstoneProjectData_2025.csv" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Dataset_and_Preprocessing/training_and_evaluation.ipynb" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/FLD.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Report/Capstone Project - Team 7.pptx" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/bayes.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/preprocessing/About ready_for_training.docx" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/preprocessing/CaptstoneProjectData_2025.csv" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/preprocessing/Random_Forest_.ipynb" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/preprocessing/create_final_dataset.ipynb" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/preprocessing/emails-normal-class.txt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/preprocessing/normal_features.txt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/preprocessing/phishing_features.csv" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/preprocessing/process_normal_data.ipynb" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/preprocessing/process_phishing_data.ipynb" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/preprocessing/ready_for_training.csv" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/preprocessing/training_and_evaluation_logicstic _regression.ipynb" beforeDir="false" />
++    <list default="true" id="b7f673e8-3457-4042-a16b-19e1133f8e60" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/classifier/bayes.py" beforeDir="false" afterPath="$PROJECT_DIR$/classifier/bayes.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -66,16 +50,16 @@
+     "Python.preprocessing.executor": "Run",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "RunOnceActivity.git.unshallow": "true",
+-    "git-widget-placeholder": "michael__new",
++    "git-widget-placeholder": "michael",
+     "last_opened_file_path": "/Users/michaelhe/Documents/uvic/ECE597/Summer-2025-ECE-597-Group7",
+     "settings.editor.selected.configurable": "advanced.settings"
+   }
+ }]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/dataset" />
+       <recent name="$PROJECT_DIR$" />
+       <recent name="$PROJECT_DIR$/classifier" />
+-      <recent name="$PROJECT_DIR$/dataset" />
+     </key>
+   </component>
+   <component name="SharedIndexes">
