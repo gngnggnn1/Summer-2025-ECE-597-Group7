@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7f673e8-3457-4042-a16b-19e1133f8e60" name="Changes" comment="add train_bayes(it will be moved to algorithm)">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classifier/all_algorithm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classifier/logistic_resgression_new.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Summer-2025-ECE-597-Group7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Summer-2025-ECE-597-Group7.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dataset/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dataset/preprocessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classifier/bayes.py" beforeDir="false" afterPath="$PROJECT_DIR$/classifier/bayes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classifier/FLD.py" beforeDir="false" afterPath="$PROJECT_DIR$/classifier/FLD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classifier/logistic_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/classifier/logistic_regression.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +49,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.FLD.executor": "Run",
+    "Python.all_algorithm.executor": "Run",
     "Python.bayes.executor": "Run",
     "Python.data_cleaning.executor": "Run",
+    "Python.logistic_regression.executor": "Run",
+    "Python.logistic_resgression_new.executor": "Run",
     "Python.preprocessing.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -119,5 +125,16 @@
     <MESSAGE value="Add data cleaning, extract the subject and body from the kaggle dataset, cleaned both dataset." />
     <MESSAGE value="add train_bayes(it will be moved to algorithm)" />
     <option name="LAST_COMMIT_MESSAGE" value="add train_bayes(it will be moved to algorithm)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/classifier/all_algorithm.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

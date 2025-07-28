@@ -4,7 +4,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import pandas as pd
 import numpy as np
-from Dataset.preprocessing import word_vectorization
+from dataset.preprocessing import word_vectorization
 from sklearn.metrics import classification_report, roc_auc_score, confusion_matrix, accuracy_score
 from cross_validation import cross_validation
 from scipy.sparse import vstack

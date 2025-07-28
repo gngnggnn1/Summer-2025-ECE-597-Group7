@@ -15,7 +15,7 @@ def train_and_save_model():
     Trains a Logistic Regression model and saves it to a file.
     """
     print("Loading and vectorizing data...")
-    tfidf_matrix, _, labels = word_vectorization('tfidf')
+    tfidf_matrix, _, labels = word_vectorization('bag')
 
     print("Splitting data into train and test sets...")
     X_train, X_test, y_train, y_test = train_test_split(
